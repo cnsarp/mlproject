@@ -5,7 +5,9 @@ from datetime import datetime
 
 
 LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
-logs_path = os.path.join(os.getcwd(),"logs",LOG_FILE)
+base_dir='C:/Users/Cometaca/Github/new_project'
+logs_path = os.path.join(base_dir, "logs", LOG_FILE)
+#logs_path = os.path.join(os.getcwd(),"logs",LOG_FILE)
 os.makedirs(logs_path, exist_ok=True)
 
 LOG_FILE_PATH = os.path.join(logs_path,LOG_FILE)
@@ -16,7 +18,5 @@ logging.basicConfig(
     level=logging.INFO,
     
 )
-logger = logging.getLogger()
-
-if __name__=="__main__":
-    logging.info('')
+if __name__== "__main__":
+    logging.info('Login!')
